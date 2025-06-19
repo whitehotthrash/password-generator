@@ -14,7 +14,7 @@ A terminal-based tool to generate, analyze, and securely store randomized passwo
 
 The application is built using object-oriented programming principles with two main classes:
 - `PasswordGenerator`: Handles password generation and strength analysis
-- `HistoryManager`: Manages password storage, retrieval, and encryption
+- `PasswordStorage`: Manages password storage, retrieval, and encryption
 
 ## Input/Output Operations
 
@@ -58,7 +58,7 @@ $ python main.py [OPTIONS]
 | `-U`, `--no-upper`   | Exclude uppercase letters                                                | Include    |
 | `-D`, `--no-digits`  | Exclude digits                                                           | Include    |
 | `-S`, `--no-symbols` | Exclude symbols (e.g. `!@#$%`)                                           | Include    |
-| `-s`, `--save`       | Append the generated password (with metadata) to `passwords.json`        | Don't save |
+| `-s`, `--save`       | Append the generated password to `passwords.json`                        | Don't save |
 | `--strength`         | (If `zxcvbn` is installed) Print entropy score and "weak/ok/strong" note | Off        |
 | `-n`, `--name TEXT`  | Assign a human-readable name/label to the password (e.g. "work email")   | None       |
 | `--search TEXT`      | Lookup and display all saved entries whose name or password contains TEXT| None       |
@@ -68,13 +68,11 @@ $ python main.py [OPTIONS]
 | Package  | Version | License    | Impact                          |
 | -------- | ------- | ---------- | ------------------------------- |
 | pyfiglet | ^0.8.1  | MIT        | Permissive, minimal obligations |
-| bcrypt   | ^4.0.1  | Apache-2.0 | Commercially friendly           |
 | zxcvbn   | ^4.4.28 | BSD-3      | Permissive                      |
 
 ### License Information
 
 - **MIT License** (pyfiglet): Permits commercial use, modification, distribution, and private use. Requires license and copyright notice.
-- **Apache-2.0** (bcrypt): Permits commercial use, modification, distribution, patent use, and private use. Requires license and copyright notice, state changes, and include notice.
 - **BSD-3** (zxcvbn): Permits commercial use, modification, distribution, and private use. Requires license and copyright notice.
 
 All licenses are permissive and suitable for both personal and commercial use. The main obligations are maintaining copyright notices and license information in the code.
