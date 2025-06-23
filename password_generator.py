@@ -21,6 +21,9 @@ class PasswordGenerator:
       if all_chars == "": # Ensure at least one character set is selected
         raise ValueError("At least one character set must be selected")
     
+      if length < 1: # Ensure password length is at least 1
+        raise ValueError("Password cannot be empty. Length must be at least 1.\n")
+    
       # Generate password
       password = ''.join(random.choice(all_chars) for _ in range(length))
       return password
