@@ -87,6 +87,14 @@ def main():
           score = strength_results['score']
           print("\nPassword strength is determined by a number between 1 and 10. The higher the number, the stronger your password is.")
           print(f"Password strength: {score}\n")
+          
+        if args.save:
+          try:
+            #  TODO: Save to JSON
+            print("Password saved.")
+          except IOError as e:
+            print(f"Error saving password: {e}")
+            
     except ValueError as e:
         print(f"Error: {e}")
 
