@@ -7,7 +7,7 @@ A terminal-based tool to generate, analyze, and securely store randomized passwo
 - Cryptographically strong password generation
 - Configurable length & character sets
 - Strength analysis via `zxcvbn`
-- Save & retrieve history in encrypted file
+- Save & retrieve history in JSON file
 - ASCII art banner (pyfiglet)
 
 ## Project Structure
@@ -20,7 +20,7 @@ The application is built using object-oriented programming principles with two m
 
 The application implements multiple types of input/output:
 - Command-line interface for user interaction
-- File I/O for password storage (encrypted JSON)
+- File I/O for password storage
 - Terminal output with colored ASCII art and formatted results
 
 ## Setup / Installation
@@ -83,4 +83,4 @@ The application implements comprehensive error handling:
 - Invalid user input validation
 - File I/O error handling
 - Password generation constraints
-- Graceful fallbacks for missing dependencies
+- Fallbacks for missing dependencies
