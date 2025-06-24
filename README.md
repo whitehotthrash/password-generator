@@ -2,6 +2,7 @@
 
 A terminal-based tool to generate, analyze, and securely store randomized passwords.
 
+
 ## Features
 
 - Cryptographically strong password generation
@@ -10,11 +11,13 @@ A terminal-based tool to generate, analyze, and securely store randomized passwo
 - Save & retrieve history in JSON file
 - ASCII art banner (pyfiglet)
 
+
 ## Project Structure
 
 The application is built using object-oriented programming principles with two main classes:
 - `PasswordGenerator`: Handles password generation and strength analysis
 - `PasswordStorage`: Manages password storage, retrieval, and encryption
+
 
 ## Input/Output Operations
 
@@ -22,6 +25,7 @@ The application implements multiple types of input/output:
 - Command-line interface for user interaction
 - File I/O for password storage
 - Terminal output with colored ASCII art and formatted results
+
 
 ## Setup / Installation
 
@@ -42,6 +46,7 @@ The application implements multiple types of input/output:
    pip install -r requirements.txt
    ```
 
+
 ## Usage
 
 Users invoke the tool entirely via the terminal:
@@ -59,9 +64,41 @@ $ python main.py [OPTIONS]
 | `-D`, `--no-digits`  | Exclude digits                                                           | Include    |
 | `-S`, `--no-symbols` | Exclude symbols (e.g. `!@#$%`)                                           | Include    |
 | `-s`, `--save`       | Append the generated password to `passwords.json`                        | Don't save |
-| `--strength`         | (If `zxcvbn` is installed) Print entropy score and "weak/ok/strong" note | Off        |
-| `-n`, `--name TEXT`  | Assign a human-readable name/label to the password (e.g. "work email")   | None       |
-| `--search TEXT`      | Lookup and display all saved entries whose name or password contains TEXT| None       |
+| `-n`, `--name TEXT`  | Assign a label to the password                                           | None       |
+| `--strength`         | (If `zxcvbn` is installed) Print entropy score and note                  | Off        |
+| `--search TEXT`      | Print saved password that includes TEXT                                  | None       |
+
+**Notes:**
+- `--save` and `--name` must be used together
+- Use quotes for multi-word names: `-s -n "my bank"`
+- When using `--search`, other flags are ignored
+- Duplicate names will prompt for overwrite confirmation
+
+## Examples:
+```bash
+  # Generate a 16-character password
+  python main.py -l 16
+
+  # Generate password with only letters and numbers
+  python main.py -S
+
+  # Save a password with a name
+  python main.py -s -n "email"
+
+  # Check password strength
+  python main.py --strength
+
+  # Search for a saved password
+  python main.py --search "email"
+```
+
+
+## Requirements
+
+- Python 3.6+
+- Virtual environment (recommended)
+- Required packages (see requirements.txt)
+
 
 ## Third-Party Packages
 
@@ -69,6 +106,7 @@ $ python main.py [OPTIONS]
 | -------- | ------- | ---------- | ------------------------------- |
 | pyfiglet | ^0.8.1  | MIT        | Permissive, minimal obligations |
 | zxcvbn   | ^4.4.28 | BSD-3      | Permissive                      |
+| colorama | ^0.4.6  | BSD-3      | Permissive                      |
 
 ### License Information
 
@@ -76,6 +114,7 @@ $ python main.py [OPTIONS]
 - **BSD-3** (zxcvbn): Permits commercial use, modification, distribution, and private use. Requires license and copyright notice.
 
 All licenses are permissive and suitable for both personal and commercial use. The main obligations are maintaining copyright notices and license information in the code.
+
 
 ## Error Handling
 
