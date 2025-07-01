@@ -29,11 +29,7 @@ The application implements multiple types of input/output:
 
 ## Setup / Installation
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourname/password_generator.git
-   cd password_generator
-   ```
+1. Clone the repo
 
 2. Create and activate a virtual environment:
    ```bash
