@@ -119,3 +119,8 @@ The application implements comprehensive error handling:
 - File I/O error handling
 - Password generation constraints
 - Fallbacks for missing dependencies
+
+## Unit Tests
+
+The application can be tested by running `pytest`
+To test a single file for example, run `pytest test_generator`
