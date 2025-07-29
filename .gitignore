@@ -1,0 +1,11 @@
+*.pyc
+__pycache__/
+.env
+venv/
+.pytest_cache/
+test_*.json
+empty_file.json
+new_file.json
+test_multiple.json
+test_passwords.json
+test_overwrite.json

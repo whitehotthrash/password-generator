@@ -122,5 +122,5 @@ The application implements comprehensive error handling:
 
 ## Unit Tests
 
-The application can be tested by running `pytest`
+The application can be tested by running `pytest` <br />
 To test a single file for example, run `pytest test_generator`
