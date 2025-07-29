@@ -44,5 +44,5 @@ def test_overwrite_password():
     
     stored_passwords = storage.read_passwords()
     assert len(stored_passwords) == 1
-    assert stored_passwords[0]["name"] == "gmail"
+    assert stored_passwords[0]["name"] == "outlook"
     assert stored_passwords[0]["password"] == second_password

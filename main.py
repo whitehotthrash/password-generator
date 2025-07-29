@@ -1,9 +1,5 @@
 import argparse
-from banner import print_banner
-from password_generator import PasswordGenerator
-from password_storage import PasswordStorage
-
-
+from index import print_banner, PasswordGenerator, PasswordStorage
 def parse_arguments():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
